@@ -1,0 +1,2 @@
+echo 'alias ytdl="yt-dlp -f bestaudio --extract-audio --audio-format mp3"' >> ~/.bashrc
+source ~/.bashrc

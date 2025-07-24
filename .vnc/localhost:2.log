@@ -1,0 +1,91 @@
+
+Xvnc TigerVNC 1.15.0 - built Mar  4 2025 13:49:08
+Copyright (C) 1999-2025 TigerVNC team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101016
+
+Built without GBM support
+Failed to initialize DRI3 extension
+Sync Extension 3.1
+
+Fri Jul 18 13:44:03 2025
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5902
+ vncext:      Created VNC server for screen 0
+Popen: `"/data/data/com.termux/files/usr/bin/xkbcomp" -w 1 "-R/data/data/com.termux/files/usr/share/X11/xkb" -xkm "-" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "/data/data/com.termux/files/usr/tmp/server-2.xkm"', fp = 0xb400007ab92bc018
+Pclose: fp = 0xb400007ab92bc018
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Could not resolve keysym XF86RefreshRateToggle
+> Warning:          Could not resolve keysym XF86Accessibility
+> Warning:          Could not resolve keysym XF86DoNotDisturb
+Errors from xkbcomp are not fatal to the X server
+Loaded XKB keymap /data/data/com.termux/files/usr/tmp/server-2.xkm, defined=0x7f
+client(0): Reserved pid(26127).
+client(0): Reserved cmdname(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:2 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:2 () -fp /data/data/com.termux/files/usr/share/fonts/75dpi -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5902).
+[mi] mieq: warning: overriding existing handler 0x0 with 0x5631f96350 for event 2
+[mi] mieq: warning: overriding existing handler 0x0 with 0x5631f96350 for event 3
+/data/data/com.termux/files/home/.vnc/xstartup: 11: twm: not found
+client(200000): Reserved pid(26136).
+client(200000): Reserved cmdname(aterm) and cmdargs(-geometry 80x24+10+10 -ls).
+AllocNewConnection: client index = 1, socket fd = 8, local = 1
+client(400000): Reserved pid(26594).
+client(400000): Reserved cmdname(fluxbox) and cmdargs(NULL).
+AllocNewConnection: client index = 2, socket fd = 9, local = 1
+client(600000): Reserved pid(26628).
+client(600000): Reserved cmdname(fbsetroot) and cmdargs(-foreground #B2B2BF -background #B2B2BF -solid #B2B2BF).
+AllocNewConnection: client index = 3, socket fd = 10, local = 1
+
+Fri Jul 18 13:45:04 2025
+ Connections: Accepted: 127.0.0.1::48562
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+
+Fri Jul 18 13:45:12 2025
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+client(800000): Reserved pid(27142).
+client(800000): Reserved cmdname(qemu-system-x86_64) and cmdargs(-hda alpine.img -cdrom alpine.iso -boot d -m 512).
+AllocNewConnection: client index = 4, socket fd = 11, local = 1
+
+Fri Jul 18 13:48:03 2025
+ VNCSConnST:  Closing 127.0.0.1::48562: Clean disconnection
+ EncodeManager: Framebuffer updates: 449
+ EncodeManager:   CopyRect:
+ EncodeManager:     Copies: 244 rects, 17.5796 Mpixels
+ EncodeManager:             3.8125 KiB (1:4503.71 ratio)
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 480 rects, 684.136 kpixels
+ EncodeManager:            7.96875 KiB (1:84.5461 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 201 rects, 211.493 kpixels
+ EncodeManager:                 10.5938 KiB (1:19.7184 ratio)
+ EncodeManager:     Indexed RLE: 47 rects, 548.254 kpixels
+ EncodeManager:                  7.52734 KiB (1:71.2011 ratio)
+ EncodeManager:     Full Colour: 15 rects, 459 pixels
+ EncodeManager:                  479 B (1:1.33403 ratio)
+ EncodeManager:   Total: 987 rects, 19.0239 Mpixels
+ EncodeManager:          30.3701 KiB (1:612.102 ratio)
+ Connections: Closed: 127.0.0.1::48562
+ ComparingUpdateTracker: 2.78091 Mpixels in / 643.202 kpixels out
+ ComparingUpdateTracker: (1:4.32354 ratio)
+client(400000): Released pid(26594).
+client(400000): Released cmdline(fluxbox) and cmdargs(NULL).
+X connection to :2 broken (explicit kill or server shutdown).
+client(200000): Released pid(26136).
+client(200000): Released cmdline(aterm) and cmdargs(-geometry 80x24+10+10 -ls).
+client(600000): Released pid(26628).
+client(600000): Released cmdline(fbsetroot) and cmdargs(-foreground #B2B2BF -background #B2B2BF -solid #B2B2BF).
+client(800000): Released pid(27142).
+client(800000): Released cmdline(qemu-system-x86_64) and cmdargs(-hda alpine.img -cdrom alpine.iso -boot d -m 512).
+
+Fri Jul 18 13:49:51 2025
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:nan ratio)
+(dix) removing device 2
+(dix) removing device 3
+(dix) removing device 5
+(dix) removing device 4
+(dix) removing device 7
+(dix) removing device 6
+client(0): Released pid(26127).
+client(0): Released cmdline(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:2 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:2 () -fp /data/data/com.termux/files/usr/share/fonts/75dpi -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5902).

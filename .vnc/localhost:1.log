@@ -1,0 +1,80 @@
+
+Xvnc TigerVNC 1.15.0 - built Mar  4 2025 13:49:08
+Copyright (C) 1999-2025 TigerVNC team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101016
+
+Built without GBM support
+Failed to initialize DRI3 extension
+Sync Extension 3.1
+
+Fri Jul 18 13:55:24 2025
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on all interface(s), port 5901
+ vncext:      Created VNC server for screen 0
+Popen: `"/data/data/com.termux/files/usr/bin/xkbcomp" -w 1 "-R/data/data/com.termux/files/usr/share/X11/xkb" -xkm "-" -em1 "The XKEYBOARD keymap compiler (xkbcomp) reports:" -emp "> " -eml "Errors from xkbcomp are not fatal to the X server" "/data/data/com.termux/files/usr/tmp/server-1.xkm"', fp = 0xb400007aa1ebc018
+Pclose: fp = 0xb400007aa1ebc018
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Could not resolve keysym XF86RefreshRateToggle
+> Warning:          Could not resolve keysym XF86Accessibility
+> Warning:          Could not resolve keysym XF86DoNotDisturb
+Errors from xkbcomp are not fatal to the X server
+Loaded XKB keymap /data/data/com.termux/files/usr/tmp/server-1.xkm, defined=0x7f
+client(0): Reserved pid(30828).
+client(0): Reserved cmdname(/data/data/com.termux/files/usr/bin/Xvnc) and cmdargs(:1 -auth /data/data/com.termux/files/home/.Xauthority -desktop localhost:1 () -fp /data/data/com.termux/files/usr/share/fonts/75dpi -geometry 1024x768 -rfbauth /data/data/com.termux/files/home/.vnc/passwd -rfbport 5901).
+[mi] mieq: warning: overriding existing handler 0x0 with 0x57789f5350 for event 2
+[mi] mieq: warning: overriding existing handler 0x0 with 0x57789f5350 for event 3
+/data/data/com.termux/files/home/.vnc/xstartup: 11: twm: not found
+client(200000): Reserved pid(30833).
+client(200000): Reserved cmdname(aterm) and cmdargs(-geometry 80x24+10+10 -ls).
+AllocNewConnection: client index = 1, socket fd = 8, local = 1
+
+Fri Jul 18 13:55:57 2025
+ Connections: Accepted: 127.0.0.1::58828
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+
+Fri Jul 18 14:12:41 2025
+ VNCSConnST:  Closing 127.0.0.1::58828: Clean disconnection
+ EncodeManager: Framebuffer updates: 3
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 6 rects, 393.216 kpixels
+ EncodeManager:            102 B (1:3855.76 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 5 rects, 327.68 kpixels
+ EncodeManager:                 432 B (1:758.657 ratio)
+ EncodeManager:     Indexed RLE: 2 rects, 81.92 kpixels
+ EncodeManager:                  302 B (1:271.338 ratio)
+ EncodeManager:   Total: 13 rects, 802.816 kpixels
+ EncodeManager:          836 B (1:960.493 ratio)
+ Connections: Closed: 127.0.0.1::58828
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:nan ratio)
+
+Fri Jul 18 14:12:53 2025
+ Connections: Accepted: 127.0.0.1::59036
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type VncAuth(2)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 6 (8bpp) rgb222
+
+Fri Jul 18 14:19:01 2025
+ VNCSConnST:  Closing 127.0.0.1::59036: Clean disconnection
+ EncodeManager: Framebuffer updates: 218
+ EncodeManager:   RRE:
+ EncodeManager:     Solid: 2.236 krects, 602.606 kpixels
+ EncodeManager:            37.1211 KiB (1:16.5589 ratio)
+ EncodeManager:   ZRLE:
+ EncodeManager:     Bitmap RLE: 5.307 krects, 1.86708 Mpixels
+ EncodeManager:                 160.678 KiB (1:11.7348 ratio)
+ EncodeManager:     Indexed RLE: 35 rects, 96.557 kpixels
+ EncodeManager:                  2.38281 KiB (1:39.7447 ratio)
+ EncodeManager:     Full Colour: 12 rects, 313 pixels
+ EncodeManager:                  325 B (1:1.40615 ratio)
+ EncodeManager:   Total: 7.59 krects, 2.56656 Mpixels
+ EncodeManager:          200.499 KiB (1:12.9445 ratio)
+ Connections: Closed: 127.0.0.1::59036
+ ComparingUpdateTracker: 2.39038 Mpixels in / 1.87216 Mpixels out
+ ComparingUpdateTracker: (1:1.2768 ratio)
