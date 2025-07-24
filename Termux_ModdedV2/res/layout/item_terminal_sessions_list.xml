@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android" android:textSize="14.0sp" android:ellipsize="marquee" android:gravity="start|center" android:id="@id/session_title" android:background="@drawable/session_background_selected" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" />
