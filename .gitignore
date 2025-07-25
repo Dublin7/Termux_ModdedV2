@@ -1,0 +1,28 @@
+# Ignore compiled files
+*.dex
+*.apk
+*.jar
+*.class
+
+# Ignore backups and logs
+*_backup_*
+*.log
+*.txt
+
+# Ignore encrypted config
+config.json.enc
+
+# Ignore local config
+config.json
+
+# Ignore IDE or tooling files
+.idea/
+*.iml
+.DS_Store
+
+# Ignore zip files and archives
+*.zip
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]

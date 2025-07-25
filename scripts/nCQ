@@ -1,0 +1,56 @@
+set_in_directory() { INPUT_DIR=$1; }
+set_out_directory() { OUTPUT_DIR=$1; }
+set_out_file() { OUTPUT_FILE=$1; }
+set_jar_path() { ANDROID_JAR=$1; }
+
+do_build() {
+    # Check tools
+    for tool in aapt ecj dx apksigner; do
+        command -v $tool >/dev/null || { echo "❌ Error: $tool not found. Install it."; exit 1; }
+    done
+
+    # Check android.jar
+    if [ ! -f "$ANDROID_JAR" ]; then
+        echo "❌ android.jar not found in $ANDROID_JAR"
+        exit 1
+    fi
+
+    echo "🚧 Cleaning output dir..."
+    rm -rf "$OUTPUT_DIR"
+    mkdir -p "$OUTPUT_DIR/build" "$OUTPUT_DIR/res"
+
+    echo "📦 Creating R.java..."
+    aapt package -f -m -J "$OUTPUT_DIR/build" -M "$INPUT_DIR/AndroidManifest.xml" -S "$INPUT_DIR/res" -I "$ANDROID_JAR" || exit 1
+
+    echo "💡 Compiling Java..."
+    find "$INPUT_DIR" -name "*.java" > sources.txt
+    ecj -d "$OUTPUT_DIR/build" -classpath "$ANDROID_JAR" @"sources.txt" || exit 1
+
+    echo "📦 Converting to DEX..."
+    dx --dex --output="$OUTPUT_DIR/classes.dex" "$OUTPUT_DIR/build" || exit 1
+
+    echo "📦 Creating APK..."
+    aapt package -f -M "$INPUT_DIR/AndroidManifest.xml" -S "$INPUT_DIR/res" -I "$ANDROID_JAR" -F "$OUTPUT_DIR/unaligned.apk" "$OUTPUT_DIR" || exit 1
+    aapt add "$OUTPUT_DIR/unaligned.apk" "$OUTPUT_DIR/classes.dex" || exit 1
+
+    echo "🔏 Signing APK..."
+    apksigner sign --ks "$INPUT_DIR/debug.keystore" --ks-pass pass:android \
+        --out "$OUTPUT_DIR/$OUTPUT_FILE" "$OUTPUT_DIR/unaligned.apk" || exit 1
+
+    echo "✅ Done: $OUTPUT_DIR/$OUTPUT_FILE"
+}
+
+# === Argparse ===
+while getopts ":h:d:o:f:j:" o; do
+    case "${o}" in
+        h) show_help && exit 0 ;;
+        d) set_in_directory "${OPTARG}" ;;
+        o) set_out_directory "${OPTARG}" ;;
+        f) set_out_file "${OPTARG}" ;;
+        j) set_jar_path "${OPTARG}" ;;
+        *) echo "❌ Invalid option: -$OPTARG"; show_help; exit 1 ;;
+    esac
+done
+
+# === GO ===
+do_build

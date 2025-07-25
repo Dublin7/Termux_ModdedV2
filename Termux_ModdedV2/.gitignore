@@ -1,0 +1,6 @@
+# 🔒 Don't leak the goods
+config.json
+salt.bin
+*.pyc
+__pycache__/
+vault.log
